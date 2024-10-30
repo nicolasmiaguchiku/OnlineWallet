@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineWallet", "OnlineWallet\OnlineWallet.csproj", "{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3E928E0-92EE-4677-8A15-BAF5E65E4715}
+	EndGlobalSection
+EndGlobal
