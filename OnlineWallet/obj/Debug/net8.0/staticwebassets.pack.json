@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\OnlineWallet.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
       "Id": "C:\\Users\\nicol\\OneDrive\\Área de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
