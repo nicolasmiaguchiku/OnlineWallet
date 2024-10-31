@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineWallet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9698a5316f8e4e226d19bb762cd57b52909cc2e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+614b0fbe37d39839de045e669398586d8536c2ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineWallet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineWallet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
