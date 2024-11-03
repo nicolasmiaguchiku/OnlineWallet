@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineWallet.Context;
+using OnlineWallet.Interfaces;
+using OnlineWallet.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,11 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("StringPadrao"));
 });
+
+builder.Services.AddScoped<SecuritySevices>();
+builder.Services.AddScoped<IUserServices, UserServices>();
+
+
 
 var app = builder.Build();
 

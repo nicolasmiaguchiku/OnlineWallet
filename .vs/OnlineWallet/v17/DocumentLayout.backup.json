@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +11,40 @@
       "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\services\\securitysevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\services\\securitysevices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\wwwroot\\css\\account.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\wwwroot\\css\\account.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\interfaces\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\interfaces\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\interfaces\\isecurityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\interfaces\\isecurityservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|c:\\users\\nicol\\onedrive\\\u00E1rea de trabalho\\onlinewallet\\onlinewallet\\context\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A04C236F-EBAE-4B09-A0E7-E4FF0CF68245}|OnlineWallet\\OnlineWallet.csproj|solutionrelative:onlinewallet\\context\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,111 +54,147 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "OnlineWallet\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "OnlineWallet\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnlineWallet\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnlineWallet\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T23:21:50.084Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "OnlineWallet\\ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "OnlineWallet\\ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:54:34.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "OnlineWallet\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "OnlineWallet\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-30T22:43:30.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "account.css",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\account.css",
-              "RelativeDocumentMoniker": "OnlineWallet\\wwwroot\\css\\account.css",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\wwwroot\\css\\account.css",
-              "RelativeToolTip": "OnlineWallet\\wwwroot\\css\\account.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-30T22:41:04.397Z",
+              "WhenOpened": "2024-11-01T03:38:30.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Models\\User.cs",
-              "RelativeDocumentMoniker": "OnlineWallet\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Models\\User.cs",
-              "RelativeToolTip": "OnlineWallet\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:22:31.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "OnlineWallet\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "OnlineWallet\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T22:06:30.797Z",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "OnlineWallet\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "OnlineWallet\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-01T03:36:09.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "OnlineWallet\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "OnlineWallet\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwB4AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-30T22:05:26.373Z",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "OnlineWallet\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:35:35.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Services\\UserServices.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Services\\UserServices.cs",
+              "RelativeToolTip": "OnlineWallet\\Services\\UserServices.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:19:02.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Interfaces\\IUserServices.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Interfaces\\IUserServices.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Interfaces\\IUserServices.cs",
+              "RelativeToolTip": "OnlineWallet\\Interfaces\\IUserServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:16:21.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SecuritySevices.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Services\\SecuritySevices.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Services\\SecuritySevices.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Services\\SecuritySevices.cs",
+              "RelativeToolTip": "OnlineWallet\\Services\\SecuritySevices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:10:49.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISecurityServices.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Interfaces\\ISecurityServices.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Interfaces\\ISecurityServices.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Interfaces\\ISecurityServices.cs",
+              "RelativeToolTip": "OnlineWallet\\Interfaces\\ISecurityServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T03:02:03.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Program.cs",
               "RelativeDocumentMoniker": "OnlineWallet\\Program.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Program.cs",
               "RelativeToolTip": "OnlineWallet\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T03:19:00.682Z",
+              "WhenOpened": "2024-11-01T02:38:29.305Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "OnlineWallet\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\appsettings.Development.json",
+              "RelativeToolTip": "OnlineWallet\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-01T02:36:25.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Context\\DataContext.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Context\\DataContext.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Context\\DataContext.cs",
+              "RelativeToolTip": "OnlineWallet\\Context\\DataContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:28:32.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OnlineWallet\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\\u00C1rea de Trabalho\\OnlineWallet\\OnlineWallet\\Models\\User.cs",
+              "RelativeToolTip": "OnlineWallet\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T02:25:55.181Z"
             }
           ]
         }
