@@ -2,7 +2,7 @@
 using OnlineWallet.Interfaces;
 using OnlineWallet.Models;
 using OnlineWallet.ViewModels;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace OnlineWallet.Services
 {
@@ -20,6 +20,13 @@ namespace OnlineWallet.Services
 
         public async Task<User> Register(RegisterViewModel newUser)
         {
+
+            var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == newUser.Email);
+
+            if (existingUser != null)
+            {
+                throw new InvalidOperationException("E-mail is already registered");
+            }
 
             string? PasswordEncrypted = ! string.IsNullOrEmpty(newUser.Password)
                                         ? await _sercurityServices.EncryptPassword(newUser.Password)

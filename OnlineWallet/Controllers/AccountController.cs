@@ -34,15 +34,21 @@ namespace OnlineWallet.Controllers
 
             try
             {
-                var user = await _userServices.Register(model);
+                var user = _userServices != null ? await _userServices.Register(model): null;
+                
                 if (user != null)
                 {
+                    TempData["SuccessMessage"] = "User created successfully";
                     return RedirectToAction("Login");
                 }
             }
+            catch (InvalidOperationException ex) 
+            {
+                TempData["ErrorMessage"] = ex.Message;
+            }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", "An error occurred while registering. Please try again.");
+                ModelState.AddModelError("", "An error occurred while registering. Please try again." + ex);
             }
 
             return View(model);
