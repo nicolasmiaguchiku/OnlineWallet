@@ -45,5 +45,18 @@ namespace OnlineWallet.Services
 
             return User;
         }
+
+        public async Task<User> AuthenticateUser(string email, string password)
+        {
+            var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+            if(user == null || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
+            {
+                return null; 
+            }
+
+            return user;
+
+        }
+        
     }
 }

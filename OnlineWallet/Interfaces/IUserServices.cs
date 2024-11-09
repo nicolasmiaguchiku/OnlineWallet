@@ -6,6 +6,6 @@ namespace OnlineWallet.Interfaces
     public interface IUserServices
     {
         Task<User> Register(RegisterViewModel newUser);
-        
+        Task<User> AuthenticateUser(string email, string passoword);
     }
 }

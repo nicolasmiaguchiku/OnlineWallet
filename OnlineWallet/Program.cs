@@ -7,6 +7,7 @@ using OnlineWallet;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.Options;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -40,8 +41,19 @@ builder.Services.AddAuthentication(x =>
         ValidateIssuerSigningKey = true,
         IssuerSigningKey = new SymmetricSecurityKey(key)
     };
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            var cookie = context.Request.Cookies["auth_token"];
+            if (!string.IsNullOrEmpty(cookie))
+            {
+                context.Token = cookie;
+            }
+            return Task.CompletedTask;
+        }
+    };
 });
-
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -62,6 +74,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

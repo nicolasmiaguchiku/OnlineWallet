@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineWallet.Interfaces;
+using OnlineWallet.Services;
 using OnlineWallet.ViewModels;
 
 namespace OnlineWallet.Controllers
@@ -52,6 +53,30 @@ namespace OnlineWallet.Controllers
             }
 
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel credentials)
+        {
+            var user = await _userServices.AuthenticateUser(credentials.Email, credentials.Password);
+            if (user == null)
+            {
+                return Unauthorized(new { message = "Email ou senha incorretos" });
+            }
+
+            var token = TokenService.GenerateToken(user);
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(2)
+            };
+
+            Response.Cookies.Append("auth_token", token, cookieOptions);
+
+            return RedirectToAction("Index", "Dashboard");
         }
     }
 }

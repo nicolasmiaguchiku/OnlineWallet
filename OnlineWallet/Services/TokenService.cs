@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Azure;
+using Microsoft.IdentityModel.Tokens;
 using OnlineWallet.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -15,14 +16,16 @@ namespace OnlineWallet.Services
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(
-                    [
-                         new (ClaimTypes.Name, user.Name)
-                    ]),
+                [
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                ]),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
+
             return tokenHandler.WriteToken(token);
         }
     }
