@@ -2,6 +2,6 @@
 {
      static class Settings
     {
-        public static string? Secret { get; set; }
+        public static string Secret = string.Empty;
     }
 }

@@ -34,7 +34,7 @@ namespace OnlineWallet.Services
 
             var User = new User
             {
-                Name = newUser.Name,
+                Name = newUser.Name ?? string.Empty,
                 Email = newUser.Email,
                 PasswordHash = PasswordEncrypted
             };

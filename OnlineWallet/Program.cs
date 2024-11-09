@@ -4,15 +4,14 @@ using OnlineWallet.Interfaces;
 using OnlineWallet.Services;
 using DotNetEnv;
 using OnlineWallet;
-
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 Env.Load();
-
-var secretKey = Environment.GetEnvironmentVariable("SECRET_KEY");
-Settings.Secret = secretKey;
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
@@ -21,10 +20,31 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<SecuritySevices>();
 builder.Services.AddScoped<IUserServices, UserServices>();
+
+var secretKey = Env.GetString("SECRET_KEY");
+Settings.Secret = secretKey ?? string.Empty;
+var key = Encoding.UTF8.GetBytes(secretKey ?? string.Empty);
+
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key)
+    };
+});
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
 
 
 var app = builder.Build();

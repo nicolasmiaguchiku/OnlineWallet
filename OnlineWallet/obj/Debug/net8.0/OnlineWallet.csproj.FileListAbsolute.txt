@@ -143,4 +143,5 @@ C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\bin\Debug\ne
 C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\obj\Debug\net8.0\OnlineWallet.csproj.AssemblyReference.cache
 C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\obj\Debug\net8.0\OnlineWallet.sourcelink.json
 C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\obj\Debug\net8.0\OnlineWa.550DFFA0.Up2Date
-C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\bin\Debug\net8.0\dotenv.net.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\nicol\OneDrive\Área de Trabalho\OnlineWallet\OnlineWallet\bin\Debug\net8.0\Sprache.dll
