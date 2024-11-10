@@ -1,5 +1,4 @@
-﻿using Azure;
-using Microsoft.IdentityModel.Tokens;
+﻿using Microsoft.IdentityModel.Tokens;
 using OnlineWallet.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -17,8 +16,8 @@ namespace OnlineWallet.Services
             {
                 Subject = new ClaimsIdentity(
                 [
-                    new Claim(ClaimTypes.Name, user.Email),
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                    new Claim(ClaimTypes.Name, user.Email ?? ""),
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString())
                 ]),
                 Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

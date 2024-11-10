@@ -58,7 +58,12 @@ namespace OnlineWallet.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel credentials)
         {
-            var user = await _userServices.AuthenticateUser(credentials.Email, credentials.Password);
+            if (string.IsNullOrEmpty(credentials.Email) || string.IsNullOrEmpty(credentials.Password))
+            {
+                return BadRequest(new { message = "Email e senha são obrigatórios" });
+            }
+
+            var user = await _userServices!.AuthenticateUser(credentials.Email, credentials.Password);
             if (user == null)
             {
                 return Unauthorized(new { message = "Email ou senha incorretos" });

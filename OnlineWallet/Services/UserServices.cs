@@ -42,16 +42,27 @@ namespace OnlineWallet.Services
             _context.Add(User);
             await _context.SaveChangesAsync();
 
+            var wallet = new Wallet
+            {
+                UserId = User.UserId,
+                Balance = 0 
+            };
+
+            _context.Add(wallet);
+            await _context.SaveChangesAsync();
+
+            User.Wallet = wallet;
+
 
             return User;
         }
 
-        public async Task<User> AuthenticateUser(string email, string password)
+        public async Task<User?> AuthenticateUser(string email, string password)
         {
             var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
-            if(user == null || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
+            if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
             {
-                return null; 
+                return null;
             }
 
             return user;
