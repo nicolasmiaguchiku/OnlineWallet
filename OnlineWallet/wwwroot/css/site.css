@@ -1,8 +1,11 @@
 body {
     background-color: #12161d;
+    overflow: hidden;
+    
 }
 
 .account-container {
+  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,5 +20,5 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 500px;
     width: 100%;
-    opacity: 1; /* ou .9 se preferir */
+    opacity: 1;
 }

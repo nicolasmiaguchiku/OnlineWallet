@@ -7,12 +7,13 @@ using OnlineWallet;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.Options;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
 Env.Load();
+var syncfusionLicense = Env.GetString("SYNCFUSION_LICENSE");
+Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
 builder.Services.AddDbContext<DataContext>(options =>
 {

@@ -13,7 +13,8 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
           "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "Syncfusion.EJ2.AspNet.Core": "27.2.2"
         },
         "runtime": {
           "OnlineWallet.dll": {}
@@ -724,6 +725,14 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
+      "Newtonsoft.Json/13.0.2": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.2.27524"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -784,6 +793,26 @@
           "lib/netstandard2.1/Sprache.dll": {
             "assemblyVersion": "2.3.1.0",
             "fileVersion": "2.3.1.0"
+          }
+        }
+      },
+      "Syncfusion.EJ2.AspNet.Core/27.2.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2",
+          "Syncfusion.Licensing": "27.2.2"
+        },
+        "runtime": {
+          "lib/net8.0/Syncfusion.EJ2.dll": {
+            "assemblyVersion": "27.2.2.0",
+            "fileVersion": "27.2.2.0"
+          }
+        }
+      },
+      "Syncfusion.Licensing/27.2.2": {
+        "runtime": {
+          "lib/net8.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "27.2.2.0",
+            "fileVersion": "27.2.2.0"
           }
         }
       },
@@ -1894,6 +1923,13 @@
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
     },
+    "Newtonsoft.Json/13.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-R2pZ3B0UjeyHShm9vG+Tu0EBb2lC8b0dFzV9gVn50ofHXh9Smjk6kTn7A/FdAsC8B5cKib1OnGYOXxRBz5XQDg==",
+      "path": "newtonsoft.json/13.0.2",
+      "hashPath": "newtonsoft.json.13.0.2.nupkg.sha512"
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
       "serviceable": true,
@@ -2012,6 +2048,20 @@
       "sha512": "sha512-Q+mXeiTxiUYG3lKYF6TS82/SyB4F2613Q1yXTMwg4jWGHEEVC3yrzHtNcI4B3qnDI0+eJsezGJ0V+cToUytHWw==",
       "path": "sprache/2.3.1",
       "hashPath": "sprache.2.3.1.nupkg.sha512"
+    },
+    "Syncfusion.EJ2.AspNet.Core/27.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kb9Z7mnoomDzQwpZxAXKlt94fPrb7J7qZATh8vSAlRhIwcKAGAwoCFdS+66vOR/UzYEHiROhTAKvlVtEk5hzjg==",
+      "path": "syncfusion.ej2.aspnet.core/27.2.2",
+      "hashPath": "syncfusion.ej2.aspnet.core.27.2.2.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/27.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dhfD4qMrtzManAzH0ERFREh3cS1CPB23eReSDJBze03H6z601y1/MP/0N/rYZUMW53vdFpRPsCCfUAXq5CNS+w==",
+      "path": "syncfusion.licensing/27.2.2",
+      "hashPath": "syncfusion.licensing.27.2.2.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

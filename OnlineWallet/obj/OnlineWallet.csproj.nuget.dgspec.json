@@ -75,6 +75,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"
+            },
+            "Syncfusion.EJ2.AspNet.Core": {
+              "target": "Package",
+              "version": "[27.2.2, )"
             }
           },
           "imports": [
@@ -96,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
