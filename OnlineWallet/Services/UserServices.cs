@@ -60,9 +60,10 @@ namespace OnlineWallet.Services
         public async Task<User?> AuthenticateUser(string email, string password)
         {
             var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+
             if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
             {
-                return null;
+                throw new InvalidOperationException("Incorrect email or password");
             }
 
             return user;

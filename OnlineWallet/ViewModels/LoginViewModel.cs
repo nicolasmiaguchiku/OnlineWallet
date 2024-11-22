@@ -5,12 +5,12 @@ namespace OnlineWallet.ViewModels
 {
     public class LoginViewModel
     {
-        [Required(ErrorMessage = "Email é obrigatório.")]
-        [EmailAddress]
-        public string? Email { get; set; }
+        [Required(ErrorMessage = "E-mail is required.")]
+        [EmailAddress(ErrorMessage = "E-mail format is invalid")]
+        public string Email { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Senha é obrigatório.")]
+        [Required(ErrorMessage = "Password is required.")]
         [DataType(DataType.Password)]
-        public string? Password { get; set; }
+        public string Password { get; set; } = string.Empty;
     }
 }
