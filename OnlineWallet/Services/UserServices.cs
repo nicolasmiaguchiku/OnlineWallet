@@ -45,7 +45,7 @@ namespace OnlineWallet.Services
             var wallet = new Wallet
             {
                 UserId = User.UserId,
-                Balance = 0 
+                Investment = 0 
             };
 
             _context.Add(wallet);

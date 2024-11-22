@@ -36,6 +36,13 @@ namespace OnlineWallet.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Descriptor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("WalletId")
                         .HasColumnType("int");
 
@@ -76,7 +83,7 @@ namespace OnlineWallet.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("WalletId"));
 
-                    b.Property<decimal>("Balance")
+                    b.Property<decimal>("Investment")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("UserId")

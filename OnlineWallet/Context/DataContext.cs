@@ -26,7 +26,7 @@ namespace OnlineWallet.Context
                 .HasForeignKey(t => t.WalletId);
 
             modelBuilder.Entity<Wallet>()
-                .Property(w => w.Balance)
+                .Property(w => w.Investment)
                 .HasColumnType("decimal(18,2)");
         }
     }
