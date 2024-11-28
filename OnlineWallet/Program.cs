@@ -22,6 +22,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<SecuritySevices>();
 builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<ITransactionServices, TransactionsServices>();
 
 var secretKey = Env.GetString("SECRET_KEY");
 Settings.Secret = secretKey ?? string.Empty;
