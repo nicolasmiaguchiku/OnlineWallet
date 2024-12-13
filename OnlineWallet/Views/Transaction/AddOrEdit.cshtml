@@ -1,0 +1,40 @@
+﻿@using OnlineWallet.ViewModels;
+@model TransactionViewModel;
+
+@{
+    ViewData["PageTitle"] = "AddOrEdit";
+}
+
+<div>
+    <div>
+        <form>
+            <div>
+                <input type="radio" id="radioExpense" name="Type" value="Expense" />
+                <label class="e-btn" for="radioExpense">Gasto</label>
+                <input type="radio" id="radioIncome" name="Type" value="Income" />
+                <label class="e-btn" for="radioIncome">Renda</label>
+                <input type="radio" id="radioInvestment" name="Type" value="Investment" />
+                <label class="e-btn" for="radioInvestment">Investimento</label>
+            </div>
+            <div>
+                <ejs-textbox id="title" placeholder="Titulo"
+                             floatLabelType="Always"></ejs-textbox>
+            </div>
+            <div>
+                <ejs-datepicker id="date"
+                                placeholder="Data" floatLabelType="Always"
+                                format="dd/MM/yyyy"></ejs-datepicker>
+            </div>
+            <div>
+                <ejs-numerictextbox id="amount"
+                                    placeholder="Valor" floatLabelType="Always"
+                                    min=0 format="c0"></ejs-numerictextbox>
+            </div>
+            <div>
+                <ejs-textbox id="note" placeholder="Descrição"
+                             floatLabelType="Always" multiline="true"></ejs-textbox>
+            </div>
+            <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
+        </form>
+    </div>
+</div>
