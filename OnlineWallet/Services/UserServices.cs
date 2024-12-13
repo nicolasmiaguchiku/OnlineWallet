@@ -1,74 +1,89 @@
-﻿    using OnlineWallet.Context;
-    using OnlineWallet.Interfaces;
-    using OnlineWallet.Models;
-    using OnlineWallet.ViewModels;
-    using Microsoft.EntityFrameworkCore;
+﻿using OnlineWallet.Context;
+using OnlineWallet.Interfaces;
+using OnlineWallet.Models;
+using OnlineWallet.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
-    namespace OnlineWallet.Services
+namespace OnlineWallet.Services
+{
+    public class UserServices : IUserServices
     {
-        public class UserServices : IUserServices
+        private readonly SecuritySevices _sercurityServices;
+        private readonly DataContext _context;
+
+
+        public UserServices(SecuritySevices securityServices, DataContext context)
         {
-            private readonly SecuritySevices _sercurityServices;
-            private readonly DataContext _context;
+            _sercurityServices = securityServices;
+            _context = context;
+        }
 
+        public async Task<User> Register(RegisterViewModel newUser)
+        {
+            using var transaction = await _context.Database.BeginTransactionAsync();
 
-            public UserServices(SecuritySevices securityServices, DataContext context)
+            try
             {
-                _sercurityServices = securityServices;
-                _context = context;
-            }
+                var existingUser = await _context.Users
+                                   .Where(u => u.Email == newUser.Email)
+                                   .AnyAsync()
+                                   .ConfigureAwait(false);
 
-            public async Task<User> Register(RegisterViewModel newUser)
-            {
-
-                var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == newUser.Email);
-
-                if (existingUser != null)
+                if (existingUser)
                 {
                     throw new InvalidOperationException("E-mail is already registered");
                 }
 
-                string? PasswordEncrypted = ! string.IsNullOrEmpty(newUser.Password)
-                                            ? await _sercurityServices.EncryptPassword(newUser.Password)
-                                            : null;
+                var passwordEncryptedTask = _sercurityServices.EncryptPassword(newUser.Password);
 
-                var User = new User
+                string? passwordEncrypted = await passwordEncryptedTask;
+
+
+                var user = new User
                 {
-                    Name = newUser.Name ?? string.Empty,
+                    Name = newUser.Name,
                     Email = newUser.Email,
-                    PasswordHash = PasswordEncrypted
+                    PasswordHash = passwordEncrypted
                 };
-
-                _context.Add(User);
-                await _context.SaveChangesAsync();
 
                 var wallet = new Wallet
                 {
-                    UserId = User.UserId,
-                    Investment = 0 
+                    UserId = user.UserId,
+                    Investment = 0
                 };
 
-                _context.Add(wallet);
-                await _context.SaveChangesAsync();
 
-                User.Wallet = wallet;
+                _context.Users.Add(user);
+                _context.Wallets.Add(wallet);
 
+                await _context.SaveChangesAsync().ConfigureAwait(false);
 
-                return User;
-            }
+                user.Wallet = wallet;
 
-            public async Task<User?> AuthenticateUser(string email, string password)
-            {
-                var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
-
-                if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
-                {
-                    throw new InvalidOperationException("Incorrect email or password");
-                }
+                await transaction.CommitAsync();
 
                 return user;
-
             }
-        
+            catch (Exception)
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
+
+
+        public async Task<User?> AuthenticateUser(string email, string password)
+        {
+            var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+
+            if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
+            {
+                throw new InvalidOperationException("Incorrect email or password");
+            }
+
+            return user;
+
+        }
+
     }
+}

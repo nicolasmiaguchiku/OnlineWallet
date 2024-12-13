@@ -1,13 +1,5 @@
-using Microsoft.EntityFrameworkCore;
-using OnlineWallet.Context;
-using OnlineWallet.Interfaces;
-using OnlineWallet.Services;
 using DotNetEnv;
-using OnlineWallet;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-
+using OnlineWallet.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,47 +7,15 @@ Env.Load();
 var syncfusionLicense = Env.GetString("SYNCFUSION_LICENSE");
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("StringPadrao"));
-});
+// Configurar banco de dados
+builder.Services.ConfigureDataBase(builder.Configuration);
 
-builder.Services.AddScoped<SecuritySevices>();
-builder.Services.AddScoped<IUserServices, UserServices>();
-builder.Services.AddScoped<ITransactionServices, TransactionsServices>();
+// Configurar serviços personalizados
+builder.Services.ConfigureCustomServices();
 
 var secretKey = Env.GetString("SECRET_KEY");
-Settings.Secret = secretKey ?? string.Empty;
-var key = Encoding.UTF8.GetBytes(secretKey ?? string.Empty);
-
-builder.Services.AddAuthentication(x =>
-{
-    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = false,
-        ValidateAudience = false,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey = new SymmetricSecurityKey(key)
-    };
-    options.Events = new JwtBearerEvents
-    {
-        OnMessageReceived = context =>
-        {
-            var cookie = context.Request.Cookies["auth_token"];
-            if (!string.IsNullOrEmpty(cookie))
-            {
-                context.Token = cookie;
-            }
-            return Task.CompletedTask;
-        }
-    };
-});
+SecretKey.Secret = secretKey ?? string.Empty;
+builder.Services.ConfigureAuthentication(SecretKey.Secret);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

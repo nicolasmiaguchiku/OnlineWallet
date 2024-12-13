@@ -5,7 +5,7 @@ namespace OnlineWallet.ViewModels
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "Username is required.")]
-        public string? Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "E-mail is required.")]
         [EmailAddress(ErrorMessage = "E-mail format is invalid")]
@@ -13,10 +13,10 @@ namespace OnlineWallet.ViewModels
 
         [Required(ErrorMessage = "Password is required")]
         [StringLength(100, ErrorMessage = "Password must be at least {2} characters long.", MinimumLength = 6)]
-        public string? Password { get; set; }
+        public string Password { get; set; } = string.Empty;
 
         [Compare("Password", ErrorMessage = "Passwords do not match.")]
-        public string? ConfirmPassword { get; set; }    
+        public string ConfirmPassword { get; set; } = string.Empty;
 
     }
 }

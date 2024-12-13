@@ -1,5 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using OnlineWallet.Models;
+using OnlineWallet.Settings;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -11,7 +12,7 @@ namespace OnlineWallet.Services
         public static string GenerateToken(User user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+            var key = Encoding.ASCII.GetBytes(SecretKey.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(
