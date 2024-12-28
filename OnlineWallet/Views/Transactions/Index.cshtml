@@ -1,0 +1,21 @@
+﻿@model List<OnlineWallet.Models.Transaction>
+
+@{
+    ViewData["PageTitle"] = "Transactions";
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <ejs-grid id="transaction" dataSource="@Model" gridLines="None"
+                  allowSorting="true" allowPaging="true">
+            <e-grid-pagesettings pageSize="10"></e-grid-pagesettings>
+            <e-grid-columns>
+                <e-grid-column headerText="Titulo" field="Title" textAlign="Center" width="110px"></e-grid-column>
+                <e-grid-column headerText="Valor" field="FormattedAmount" textAlign="Center" width="110px"></e-grid-column>
+                <e-grid-column headerText="Data" field="Date" textAlign="Center" width="110px"
+                    type="date" format="dd/MM/yyyy" textAlign="Left">
+                </e-grid-column>
+            </e-grid-columns>
+        </ejs-grid>
+    </div>
+</div>

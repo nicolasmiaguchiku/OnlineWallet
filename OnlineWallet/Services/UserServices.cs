@@ -1,29 +1,30 @@
-﻿using OnlineWallet.Context;
-using OnlineWallet.Interfaces;
-using OnlineWallet.Models;
-using OnlineWallet.ViewModels;
-using Microsoft.EntityFrameworkCore;
+﻿    using OnlineWallet.Context;
+    using OnlineWallet.Interfaces;
+    using OnlineWallet.Models;
+    using OnlineWallet.ViewModels;
+    using Microsoft.EntityFrameworkCore;
 
-namespace OnlineWallet.Services
-{
-    public class UserServices : IUserServices
+    namespace OnlineWallet.Services
     {
-        private readonly SecuritySevices _sercurityServices;
-        private readonly DataContext _context;
-
-
-        public UserServices(SecuritySevices securityServices, DataContext context)
+        public class UserServices : IUserServices
         {
-            _sercurityServices = securityServices;
-            _context = context;
-        }
+            private readonly SecuritySevices _sercurityServices;
+            private readonly DataContext _context;
+
+
+            public UserServices(SecuritySevices securityServices, DataContext context)
+            {
+                _sercurityServices = securityServices;
+                _context = context;
+            }
 
         public async Task<User> Register(RegisterViewModel newUser)
         {
-            using var transaction = await _context.Database.BeginTransactionAsync();
+            var transaction = await _context.Database.BeginTransactionAsync().ConfigureAwait(false);
 
             try
             {
+
                 var existingUser = await _context.Users
                                    .Where(u => u.Email == newUser.Email)
                                    .AnyAsync()
@@ -43,47 +44,41 @@ namespace OnlineWallet.Services
                 {
                     Name = newUser.Name,
                     Email = newUser.Email,
-                    PasswordHash = passwordEncrypted
+                    PasswordHash = passwordEncrypted,
+                    Wallet = new Wallet
+                    {
+                        Investment = 0
+                    }
                 };
-
-                var wallet = new Wallet
-                {
-                    UserId = user.UserId,
-                    Investment = 0
-                };
-
 
                 _context.Users.Add(user);
-                _context.Wallets.Add(wallet);
 
                 await _context.SaveChangesAsync().ConfigureAwait(false);
 
-                user.Wallet = wallet;
-
-                await transaction.CommitAsync();
+                await transaction.CommitAsync().ConfigureAwait(false);
 
                 return user;
             }
             catch (Exception)
             {
-                await transaction.RollbackAsync();
+                await transaction.RollbackAsync().ConfigureAwait(false);
                 throw;
             }
         }
 
 
         public async Task<User?> AuthenticateUser(string email, string password)
-        {
-            var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
-
-            if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
             {
-                throw new InvalidOperationException("Incorrect email or password");
+                var user = await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+
+                if (user == null || string.IsNullOrEmpty(user.PasswordHash) || !_sercurityServices.VerifyPassword(password, user.PasswordHash))
+                {
+                    throw new InvalidOperationException("Incorrect email or password");
+                }
+
+                return user;
+
             }
-
-            return user;
-
+        
         }
-
     }
-}

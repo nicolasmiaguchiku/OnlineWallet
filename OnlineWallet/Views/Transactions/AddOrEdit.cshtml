@@ -7,34 +7,47 @@
 
 <div>
     <div>
-        <form>
+        <form asp-action="AddTransaction" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div>
-                <input type="radio" id="radioExpense" name="Type" value="Expense" />
-                <label class="e-btn" for="radioExpense">Gasto</label>
                 <input type="radio" id="radioIncome" name="Type" value="Income" />
                 <label class="e-btn" for="radioIncome">Renda</label>
+
                 <input type="radio" id="radioInvestment" name="Type" value="Investment" />
                 <label class="e-btn" for="radioInvestment">Investimento</label>
+
+                <input type="radio" id="radioExpense" name="Type" value="Expense" />
+                <label class="e-btn" for="radioExpense">Gasto</label>
+                
+                
             </div>
             <div>
                 <ejs-textbox id="title" placeholder="Titulo"
-                             floatLabelType="Always"></ejs-textbox>
+                             floatLabelType="Always">
+                 </ejs-textbox>
+                <span asp-validation-for="Title" class="text-danger fs-6"></span>
             </div>
             <div>
                 <ejs-datepicker id="date"
                                 placeholder="Data" floatLabelType="Always"
-                                format="dd/MM/yyyy"></ejs-datepicker>
+                                format="dd/MM/yyyy">
+                </ejs-datepicker>
+
             </div>
             <div>
                 <ejs-numerictextbox id="amount"
                                     placeholder="Valor" floatLabelType="Always"
-                                    min=0 format="c0"></ejs-numerictextbox>
+                                    min=0 format="c0">
+                </ejs-numerictextbox>
+                <span asp-validation-for="Amount" class="text-danger fs-6"></span>
             </div>
             <div>
-                <ejs-textbox id="note" placeholder="Descrição"
-                             floatLabelType="Always" multiline="true"></ejs-textbox>
+                <ejs-textbox id="descriptor" placeholder="Descrição"
+                             floatLabelType="Always" multiline="true">
+                </ejs-textbox>
             </div>
             <ejs-button id="submit" type="submit" content="Submit" cssClass="e-success"></ejs-button>
         </form>
     </div>
 </div>
+

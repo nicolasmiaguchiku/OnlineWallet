@@ -30,8 +30,8 @@ namespace OnlineWallet.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");

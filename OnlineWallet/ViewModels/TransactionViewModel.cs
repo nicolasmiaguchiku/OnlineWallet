@@ -6,18 +6,20 @@ namespace OnlineWallet.ViewModels
     {
         Expense,
         Income,
-        Investiment
+        Investment
     }
     public class TransactionViewModel
     {
         [Required(ErrorMessage = "Titulo da transação obrigatório.")]
-        public string? Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         public DateTime Date = DateTime.Now;
 
         [Range(0.01, double.MaxValue, ErrorMessage = "O valor da transação deve ser maior que 0.")]
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
 
         public TransactionType Type { get; set; }
+
+        public string? Descriptor { get; set; }
     }
 }

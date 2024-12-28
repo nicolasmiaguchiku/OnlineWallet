@@ -3,6 +3,17 @@ using OnlineWallet.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5110);
+    options.ListenAnyIP(7110, listenOptions =>
+    {
+        listenOptions.UseHttps();
+    });
+});
+
+
 Env.Load();
 var syncfusionLicense = Env.GetString("SYNCFUSION_LICENSE");
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
@@ -27,7 +38,7 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    
     app.UseHsts();
 }
 

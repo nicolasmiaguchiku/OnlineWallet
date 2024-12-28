@@ -12,8 +12,8 @@ using OnlineWallet.Context;
 namespace OnlineWallet.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241128020721_ArrangingDatabaseTables")]
-    partial class ArrangingDatabaseTables
+    [Migration("20241227215105_CreateDb")]
+    partial class CreateDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,8 +33,8 @@ namespace OnlineWallet.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");

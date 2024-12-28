@@ -13,10 +13,10 @@ namespace OnlineWallet.Models
         [JsonIgnore]
         public Wallet? Wallet { get; set; }
         public string Title { get; set; } = string.Empty;
-        public DateTime Date { get; set; }
-        public string? Type { get; set; }
         public string? Descriptor { get; set; }
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
+        public string? Type { get; set; }
+        public DateTime Date { get; set; }
 
         [NotMapped]
         public string? FormattedAmount
