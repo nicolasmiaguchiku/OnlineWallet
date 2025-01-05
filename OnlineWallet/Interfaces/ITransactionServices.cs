@@ -8,6 +8,6 @@ namespace OnlineWallet.Interfaces
     {
         Task<List<Transaction>> GetTransactionsByUser(int userId);
 
-        Task<Transaction> AddTransaction(TransactionViewModel Transaction, int userId);
+        Task<Transaction> AddOrEdit(TransactionViewModel Transaction, int userId);
     }
 }

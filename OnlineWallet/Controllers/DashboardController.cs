@@ -8,7 +8,7 @@ namespace OnlineWallet.Controllers
     public class DashboardController : Controller
     {
 
-        //[Authorize]
+        [Authorize]
         public IActionResult Index()
         {
             return View();

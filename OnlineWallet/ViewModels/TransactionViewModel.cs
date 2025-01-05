@@ -11,9 +11,10 @@ namespace OnlineWallet.ViewModels
     public class TransactionViewModel
     {
         [Required(ErrorMessage = "Titulo da transação obrigatório.")]
-        public string Title { get; set; } = string.Empty;
+        public string? Title { get; set; }
 
-        public DateTime Date = DateTime.Now;
+        [Required(ErrorMessage = "A data é obrigatória.")]
+        public DateTime? Date { get; set; } = DateTime.Now;
 
         [Range(0.01, double.MaxValue, ErrorMessage = "O valor da transação deve ser maior que 0.")]
         public decimal Amount { get; set; }

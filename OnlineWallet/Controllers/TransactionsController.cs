@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OnlineWallet.Interfaces;
-using OnlineWallet.Services;
 using OnlineWallet.ViewModels;
 using System.Security.Claims;
-using System.Transactions;
 
 namespace OnlineWallet.Controllers
 {
@@ -16,6 +15,7 @@ namespace OnlineWallet.Controllers
             _transactionServices = transactionServices ?? throw new ArgumentNullException(nameof(transactionServices));
         }
 
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
@@ -27,6 +27,7 @@ namespace OnlineWallet.Controllers
             return View(transactions);
         }
 
+        [Authorize]
         public IActionResult AddOrEdit()
         {
             return View();
@@ -34,7 +35,7 @@ namespace OnlineWallet.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddTransaction(TransactionViewModel transaction)
+        public async Task<IActionResult> AddOrEdit(TransactionViewModel transaction)
         {
             if (ModelState.IsValid)
             {
@@ -46,11 +47,11 @@ namespace OnlineWallet.Controllers
                     return Unauthorized("Usuário não autenticado.");
                 }
 
-                var newTransaction = await _transactionServices.AddTransaction(transaction, int.Parse(userId));
+                var newTransaction = await _transactionServices.AddOrEdit(transaction, int.Parse(userId));
                 return RedirectToAction("Index");
             }
 
-            return View(transaction);
+            return View("AddOrEdit", transaction);
         }
     }
 }
